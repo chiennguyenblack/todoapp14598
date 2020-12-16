@@ -216,7 +216,7 @@ function logOut() {
     fetch("https://api-nodejs-todolist.herokuapp.com/user/logout", requestOptions)
         .then(response => response.text())
         .then(function (result) {
-            window.location.href = 'index.html';
+            window.location.href = 'home.html';
             window.localStorage.clear();
         })
         .catch(error => console.log('error', error));
