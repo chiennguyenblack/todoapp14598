@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task UI</title>
+  <script language="javascript" src="codethuan.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body onload="loadingUI()">
+  <div class="mt-15 mModal">
+    <div style="width:90%" class="spaceBwForm">
+      <div id="renderName">
+      </div>
+      <div class="logout">
+        <button class="btn btn-logout" onclick="logOut()">
+          Log out
+        </button>
+      </div>
+    </div>
+    
+    <button class="open-button" onclick="openForm()">Add Your Task</button>
+    <div class="form-popup" id="myForm">
+      <form action="" class="form-container">
+        <h1>ADD TASK</h1>
+
+        <label for="description"><b>Task description</b></label>
+        <input type="text" placeholder="Task description" id="desc">
+
+        <label for="Status"><b>Status</b></label>
+        <select class="mg-15" id="status">
+          <option value="false">Lets do it</option>
+          <option value="true">Done! Good job</option>
+        </select>
+        <button type="button" class="btn" onclick="addTask()">Save</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="center" style="width:90%">
+    <table style="width:100%">
+      <tr>
+        <th style="width:40%">Task</th>
+        <th style="width:20%">Status</th>
+        <th style="width:25%">Date</th>
+        <th style="width:15%">Feature</th>
+      </tr>
+    </table>
+    <div id="renderTask">
+    </div>
+  </div>
+</body>
+
+</html>
