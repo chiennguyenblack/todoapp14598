@@ -2,16 +2,20 @@ html,body{
     margin: 0;
     padding: 0;
 }
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+*{
+  box-sizing: border-box;
+}
 .center{
   margin-left: 5%;
 }
-.myModal {
+.mModal {
   display: none; 
   position: fixed; 
-  z-index: 1; 
-  padding-top: 100px;
+  z-index: 2;
   left: 0;
   top: 0;
   width: 100%; 
@@ -20,10 +24,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4);
 }
-/* Button used to open the contact form - fixed at the bottom of the page */
+/* Button used to open the addtask form - fixed at the bottom of the page */
 .open-button {
   background-color: #4CAF50;
-  z-index: 2;
+  z-index: 1;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -42,8 +46,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-popup {
   display: none;
   position: fixed;
-  top:20%;
-  right:40%;
+  top:25%;
+  left: calc(50% - 150px);
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
@@ -59,9 +63,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   justify-content: center;
 }
 .form-container {
-  max-width: 300px;
+  width: 300px;
   padding: 10px;
   background-color: white;
+  border-radius: 5px;
 }
 
 /* Full-width input fields */
@@ -79,7 +84,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   outline: none;
 }
 
-/* Set a style for the submit/login button */
+/* Set a style for the button */
 .form-container .btn {
   background-color: #4CAF50;
   color: white;
@@ -134,4 +139,16 @@ th, td {
 }
 .btn-logout{
   background-color: black;
+}
+.btn-search{
+  background-color: black;
+}
+.searchContent{
+  text-indent: 2px;
+  border-radius: 5px;
+  padding: 5px;
+}
+/* task completed */
+.done-task{
+  color: #686868;;
 }

@@ -5,23 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task UI</title>
-  <script language="javascript" src="codethuan.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script language="javascript" src="./codejquery/jqTaskUi.js"></script>
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body onload="loadingUI()">
-  <div class="mt-15 mModal">
+<body id="bodyTaskUi ">
+  <div class="mModal">
+  </div>
+  <div class="mt-15">
     <div style="width:90%" class="spaceBwForm">
       <div id="renderName">
       </div>
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Search box" class="searchContent">
+        <button type="button" class="btn btn-search">Search</button>
+        <div id="resultTasks"></div>
+      </div>
       <div class="logout">
-        <button class="btn btn-logout" onclick="logOut()">
+        <button class="btn btn-logout">
           Log out
         </button>
       </div>
     </div>
-    
-    <button class="open-button" onclick="openForm()">Add Your Task</button>
+
+    <button class="open-button">Add Your Task</button>
     <div class="form-popup" id="myForm">
       <form action="" class="form-container">
         <h1>ADD TASK</h1>
@@ -34,12 +42,11 @@
           <option value="false">Lets do it</option>
           <option value="true">Done! Good job</option>
         </select>
-        <button type="button" class="btn" onclick="addTask()">Save</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <button type="button" class="btn save">Save</button>
+        <button type="button" class="btn cancel">Close</button>
       </form>
     </div>
   </div>
-
   <div class="center" style="width:90%">
     <table style="width:100%">
       <tr>
