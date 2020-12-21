@@ -5,7 +5,7 @@ $(document).ready(function () {
         //get value when click login
         var meo = $('#meo').val();
         var pass = $('#pass').val();
-        $('#handle').html("Mạng hơi lag tí...")
+        $('#handle').html("Waiting for network...")
         //
         var settings = {
             "url": "https://api-nodejs-todolist.herokuapp.com/user/login",
